@@ -7,4 +7,5 @@ $baseDir = dirname(dirname($vendorDir));
 
 return array(
     'Opengraph' => array($vendorDir . '/euskadi31/opengraph/src'),
+    'Multiplayer' => array($vendorDir . '/fg/multiplayer/lib'),
 );

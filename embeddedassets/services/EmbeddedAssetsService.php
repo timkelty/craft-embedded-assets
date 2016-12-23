@@ -145,6 +145,11 @@ class EmbeddedAssetsService extends BaseApplicationComponent
 			'media' => $media,
 		));
 
+		if ($media->type === 'video') {
+			$Multiplayer = new Multiplayer\Multiplayer();
+			$media->html = $Multiplayer->html($Media->url, EmbeddedAssetsPlugin::getParameters());
+		}
+
 		// Purify HTML is necessary
 		if($media->html && !$media->safeHtml)
 		{
